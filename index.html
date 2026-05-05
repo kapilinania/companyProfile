@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coming Soon</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        background: linear-gradient(135deg, #4facfe, #00f2fe);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        overflow: hidden;
+    }
+
+    .container {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        width: 90%;
+        max-width: 500px;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 20px;
+        opacity: 0.8;
+    }
+
+    .countdown {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+
+    .time-box {
+        background: rgba(255,255,255,0.2);
+        padding: 15px;
+        border-radius: 10px;
+        width: 22%;
+    }
+
+    .time-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .email-box {
+        margin-top: 20px;
+    }
+
+    input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        width: 70%;
+        outline: none;
+    }
+
+    button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        background: #ff7eb3;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #ff4e8a;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Coming Soon 🚀</h1>
+    <p>We are working hard to launch something amazing!</p>
+
+    <div class="countdown">
+        <div class="time-box">
+            <h2 id="days">00</h2>
+            <span>Days</span>
+        </div>
+        <div class="time-box">
+            <h2 id="hours">00</h2>
+            <span>Hours</span>
+        </div>
+        <div class="time-box">
+            <h2 id="minutes">00</h2>
+            <span>Minutes</span>
+        </div>
+        <div class="time-box">
+            <h2 id="seconds">00</h2>
+            <span>Seconds</span>
+        </div>
+    </div>
+
+    <div class="email-box">
+        <input type="email" placeholder="Enter your email">
+        <button>Notify Me</button>
+    </div>
+</div>
+
+<script>
+    // Set launch date
+    const launchDate = new Date("June 30, 2026 00:00:00").getTime();
+
+    const countdown = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = launchDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        if (distance < 0) {
+            clearInterval(countdown);
+            document.querySelector(".countdown").innerHTML = "We are Live 🎉";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>
