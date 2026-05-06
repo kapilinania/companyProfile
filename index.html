@@ -1,161 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon</title>
-
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-        height: 100vh;
-        background: linear-gradient(135deg, #4facfe, #00f2fe);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        overflow: hidden;
-    }
-
-    .container {
-        text-align: center;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        padding: 40px;
-        border-radius: 20px;
-        box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-        width: 90%;
-        max-width: 500px;
-        animation: fadeIn 1.5s ease-in-out;
-    }
-
-    h1 {
-        font-size: 3rem;
-        margin-bottom: 10px;
-    }
-
-    p {
-        margin-bottom: 20px;
-        opacity: 0.8;
-    }
-
-    .countdown {
-        display: flex;
-        justify-content: space-between;
-        margin: 20px 0;
-    }
-
-    .time-box {
-        background: rgba(255,255,255,0.2);
-        padding: 15px;
-        border-radius: 10px;
-        width: 22%;
-    }
-
-    .time-box h2 {
-        font-size: 1.5rem;
-    }
-
-    .email-box {
-        margin-top: 20px;
-    }
-
-    input {
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        width: 70%;
-        outline: none;
-    }
-
-    button {
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        background: #ff7eb3;
-        color: #fff;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-
-    button:hover {
-        background: #ff4e8a;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>ByteSerf | Premium Web & AI Solutions Agency</title>
+    <meta name="description" content="ByteSerf is a premium agency founded by Kapil Inania, specializing in high-performance web architectures, custom AI agents, and elite tech education.">
+    <meta name="keywords" content="Web Development Agency, AI Consulting, IT Academy, Full Stack Development, React Developer, SEO Agency, ByteSerf, Kapil Inania">
+    <meta name="author" content="Kapil Inania">
+    <meta property="og:title" content="ByteSerf | Premium Web & AI Solutions Agency">
+    <meta property="og:description" content="ByteSerf specializes in high-performance web architectures, custom AI agents, and elite tech education.">
+    <meta property="og:type" content="website">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="ambient-bg"></div>
 
-<div class="container">
-    <h1>Coming Soon 🚀</h1>
-    <p>We are working hard to launch something amazing!</p>
-
-    <div class="countdown">
-        <div class="time-box">
-            <h2 id="days">00</h2>
-            <span>Days</span>
-        </div>
-        <div class="time-box">
-            <h2 id="hours">00</h2>
-            <span>Hours</span>
-        </div>
-        <div class="time-box">
-            <h2 id="minutes">00</h2>
-            <span>Minutes</span>
-        </div>
-        <div class="time-box">
-            <h2 id="seconds">00</h2>
-            <span>Seconds</span>
-        </div>
+    <div class="floating-actions">
+        <a href="https://wa.me/919828522814" target="_blank" class="float-btn wa-btn"><i class='bx bxl-whatsapp'></i></a>
+        <a href="https://instagram.com/kapil_inaniya" target="_blank" class="float-btn ig-btn"><i class='bx bxl-instagram'></i></a>
+        <a href="tel:+919828522814" class="float-btn call-btn"><i class='bx bxs-phone'></i></a>
     </div>
 
-    <div class="email-box">
-        <input type="email" placeholder="Enter your email">
-        <button>Notify Me</button>
-    </div>
-</div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Byte<span>Serf.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="courses.html">Academy</a></li>
+                <li><a href="internships.html">Internships</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button class="mobile-menu-btn"><i class='bx bx-menu'></i></button>
+        </div>
+    </nav>
 
-<script>
-    // Set launch date
-    const launchDate = new Date("June 30, 2026 00:00:00").getTime();
+    <!-- Stunning Modern Hero Section -->
+    <section class="hero reveal">
+        <div class="hero-glow-orb"></div>
+        <div class="container hero-content">
+            <div class="hero-badge"><i class='bx bx-rocket'></i> Transforming Ideas into Digital Reality</div>
+            <h1 class="hero-title">Build the Future with <br><span class="gradient-text">ByteSerf</span></h1>
+            <p class="hero-subtitle">Founded by Kapil Inania. We are a premium agency specializing in high-performance web architectures, custom AI agents, and elite tech education.</p>
+            <div class="btn-group">
+                <a href="services.html" class="btn btn-glow">Start a Project <i class='bx bx-right-arrow-alt'></i></a>
+                <a href="courses.html" class="btn btn-outline">Explore Academy <i class='bx bx-book-open'></i></a>
+            </div>
+        </div>
+    </section>
 
-    const countdown = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = launchDate - now;
+    <!-- Stunning Stats Strip -->
+    <section class="stats-strip reveal">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">109+</div>
+                <div class="stat-label">Global Clients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1452+</div>
+                <div class="stat-label">Students Trained</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">72+</div>
+                <div class="stat-label">Interns Placed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Years Expertise</div>
+            </div>
+        </div>
+    </section>
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    <!-- Premium Services Grid -->
+    <section class="section-padding container">
+        <div class="section-header text-center reveal">
+            <h2>The <span class="gradient-text">ByteSerf</span> Advantage</h2>
+            <p>End-to-end IT solutions designed for maximum performance, security, and aesthetics.</p>
+        </div>
+        <div class="grid-3">
+            <div class="premium-card reveal">
+                <div class="premium-icon-box"><i class='bx bx-code-alt'></i></div>
+                <h3>Web Development</h3>
+                <p>Enterprise-grade architectures, from high-converting static landing pages to complex React/Node.js web applications.</p>
+                <a href="services.html" style="color: var(--accent-blue); font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 5px;">View Packages <i class='bx bx-right-arrow-alt'></i><span style="position: absolute; inset: 0; z-index: 10;"></span></a>
+            </div>
 
-        document.getElementById("days").innerHTML = days;
-        document.getElementById("hours").innerHTML = hours;
-        document.getElementById("minutes").innerHTML = minutes;
-        document.getElementById("seconds").innerHTML = seconds;
+            <div class="premium-card reveal">
+                <div class="premium-icon-box"><i class='bx bx-brain'></i></div>
+                <h3>AI & Automation</h3>
+                <p>Custom AI automation, LangChain integrations, and LLM-powered business solutions to streamline your operations.</p>
+                <a href="services.html" style="color: var(--accent-blue); font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 5px;">Learn More <i class='bx bx-right-arrow-alt'></i><span style="position: absolute; inset: 0; z-index: 10;"></span></a>
+            </div>
 
-        if (distance < 0) {
-            clearInterval(countdown);
-            document.querySelector(".countdown").innerHTML = "We are Live 🎉";
-        }
-    }, 1000);
-</script>
+            <div class="premium-card reveal">
+                <div class="premium-icon-box"><i class='bx bxs-graduation'></i></div>
+                <h3>Academy & Internships</h3>
+                <p>100% placement support. Master Full-Stack development and Data Science under the mentorship of industry veterans.</p>
+                <a href="courses.html" style="color: var(--accent-blue); font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 5px;">View Courses <i class='bx bx-right-arrow-alt'></i><span style="position: absolute; inset: 0; z-index: 10;"></span></a>
+            </div>
+        </div>
+    </section>
 
+    <!-- NEW SECTION: Our Proven Process -->
+    <section class="section-padding container">
+        <div class="section-header text-center reveal">
+            <h2>Our Proven <span class="gradient-text">Process</span></h2>
+            <p>We don't just build websites; we engineer digital growth. Here is how we take your project from idea to reality.</p>
+        </div>
+        <div class="process-timeline">
+            <div class="process-step reveal">
+                <div class="step-number">1</div>
+                <h3>Discovery & Strategy</h3>
+                <p>We start by deeply understanding your business goals, target audience, and competitive landscape to craft a tailored digital strategy.</p>
+            </div>
+            <div class="process-step reveal">
+                <div class="step-number">2</div>
+                <h3>UI/UX Design</h3>
+                <p>Our award-winning designers create wireframes and high-fidelity mockups, ensuring the final product is visually stunning and highly intuitive.</p>
+            </div>
+            <div class="process-step reveal">
+                <div class="step-number">3</div>
+                <h3>Engineering & Development</h3>
+                <p>We write clean, scalable code using the latest frameworks (React, Node.js, Python), focusing on performance, SEO, and security.</p>
+            </div>
+            <div class="process-step reveal">
+                <div class="step-number">4</div>
+                <h3>Launch & Growth</h3>
+                <p>After rigorous testing, we deploy your project. But we don't stop there; our digital marketing team steps in to scale your traffic and conversions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google-Style Review Slider -->
+    <section class="section-padding reveal" style="padding-top: 0; overflow: hidden;">
+        <div class="container section-header text-center">
+            <h2>Trusted by <span class="gradient-text">Industry Leaders</span></h2>
+            <p>Real reviews from businesses and students who have experienced the ByteSerf difference.</p>
+        </div>
+        <div class="review-wrapper">
+            <div class="review-track">
+                <!-- 8 Distinct Reviews -->
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-1">A</div>
+                        <div class="reviewer-info">
+                            <h4>Anjali M.</h4>
+                            <div class="reviewer-meta">Tech Startup CEO</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                    </div>
+                    <p class="review-text">"ByteSerf transformed our online presence. Their web development team delivered a blazing fast React application that increased our conversions by 300%."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-2">R</div>
+                        <div class="reviewer-info">
+                            <h4>Rahul K.</h4>
+                            <div class="reviewer-meta">Full Stack Developer</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
+                    </div>
+                    <p class="review-text">"The Academy's Full Stack MERN course is unmatched. Kapil provided incredible mentorship, and the 100% placement support helped me secure a high-paying job."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-3">V</div>
+                        <div class="reviewer-info">
+                            <h4>Vikram S.</h4>
+                            <div class="reviewer-meta">E-Commerce Owner</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bx-star'></i>
+                    </div>
+                    <p class="review-text">"Their Digital Marketing and AI Automation solutions saved us countless hours. Highly recommend ByteSerf to any business looking to scale efficiently."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-4">P</div>
+                        <div class="reviewer-info">
+                            <h4>Priya T.</h4>
+                            <div class="reviewer-meta">Marketing Director</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                    </div>
+                    <p class="review-text">"Absolutely brilliant. They took over our social media management and within 3 months, our organic reach skyrocketed. Kapil's team is highly professional."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-5">S</div>
+                        <div class="reviewer-info">
+                            <h4>Sandeep J.</h4>
+                            <div class="reviewer-meta">Agency Founder</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
+                    </div>
+                    <p class="review-text">"We outsourced a complex Next.js project to ByteSerf. The code quality was pristine, and they delivered exactly on deadline. A reliable partner."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-6">M</div>
+                        <div class="reviewer-info">
+                            <h4>Manish D.</h4>
+                            <div class="reviewer-meta">Data Science Intern</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bx-star'></i><i class='bx bx-star'></i>
+                    </div>
+                    <p class="review-text">"The internship program is very rigorous. I learned a lot about predictive modeling, though the workload was heavy. Great stepping stone for a career."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-7">N</div>
+                        <div class="reviewer-info">
+                            <h4>Neha R.</h4>
+                            <div class="reviewer-meta">Local Business Owner</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                    </div>
+                    <p class="review-text">"I bought the 5-page starter package for ₹2,999. Incredible value. The site looks like it cost ₹50,000. It is fast, beautiful, and mobile-responsive."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-8">K</div>
+                        <div class="reviewer-info">
+                            <h4>Karan B.</h4>
+                            <div class="reviewer-meta">Software Engineer</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
+                    </div>
+                    <p class="review-text">"Kapil's knowledge of AI Agents and LangChain is top tier. The training I received here completely shifted the trajectory of my tech career."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+
+                <!-- Duplicate the 8 reviews to make the CSS infinite scroll seamless -->
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-1">A</div>
+                        <div class="reviewer-info">
+                            <h4>Anjali M.</h4>
+                            <div class="reviewer-meta">Tech Startup CEO</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                    </div>
+                    <p class="review-text">"ByteSerf transformed our online presence. Their web development team delivered a blazing fast React application that increased our conversions by 300%."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-2">R</div>
+                        <div class="reviewer-info">
+                            <h4>Rahul K.</h4>
+                            <div class="reviewer-meta">Full Stack Developer</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
+                    </div>
+                    <p class="review-text">"The Academy's Full Stack MERN course is unmatched. Kapil provided incredible mentorship, and the 100% placement support helped me secure a high-paying job."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-3">V</div>
+                        <div class="reviewer-info">
+                            <h4>Vikram S.</h4>
+                            <div class="reviewer-meta">E-Commerce Owner</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bx-star'></i>
+                    </div>
+                    <p class="review-text">"Their Digital Marketing and AI Automation solutions saved us countless hours. Highly recommend ByteSerf to any business looking to scale efficiently."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-4">P</div>
+                        <div class="reviewer-info">
+                            <h4>Priya T.</h4>
+                            <div class="reviewer-meta">Marketing Director</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                    </div>
+                    <p class="review-text">"Absolutely brilliant. They took over our social media management and within 3 months, our organic reach skyrocketed. Kapil's team is highly professional."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-5">S</div>
+                        <div class="reviewer-info">
+                            <h4>Sandeep J.</h4>
+                            <div class="reviewer-meta">Agency Founder</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
+                    </div>
+                    <p class="review-text">"We outsourced a complex Next.js project to ByteSerf. The code quality was pristine, and they delivered exactly on deadline. A reliable partner."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-6">M</div>
+                        <div class="reviewer-info">
+                            <h4>Manish D.</h4>
+                            <div class="reviewer-meta">Data Science Intern</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bx-star'></i><i class='bx bx-star'></i>
+                    </div>
+                    <p class="review-text">"The internship program is very rigorous. I learned a lot about predictive modeling, though the workload was heavy. Great stepping stone for a career."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-7">N</div>
+                        <div class="reviewer-info">
+                            <h4>Neha R.</h4>
+                            <div class="reviewer-meta">Local Business Owner</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                    </div>
+                    <p class="review-text">"I bought the 5-page starter package for ₹2,999. Incredible value. The site looks like it cost ₹50,000. It is fast, beautiful, and mobile-responsive."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-img r-8">K</div>
+                        <div class="reviewer-info">
+                            <h4>Karan B.</h4>
+                            <div class="reviewer-meta">Software Engineer</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
+                    </div>
+                    <p class="review-text">"Kapil's knowledge of AI Agents and LangChain is top tier. The training I received here completely shifted the trajectory of my tech career."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid reveal">
+            <div class="footer-col">
+                <a href="index.html" class="logo">Byte<span style="color:var(--accent-blue);">Serf.</span></a>
+                <p style="margin-top: 15px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8;">Founded by Kapil Inania.<br>We shape the future of the web.</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/kapil_inaniya" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://wa.me/919828522814" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+                <div class="trusted-seal">
+                    <i class='bx bx-check-shield'></i> 100% Trusted Agency
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="courses.html">Academy</a></li>
+                    <li><a href="internships.html">Internships</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="about.html">About Kapil Inania</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
