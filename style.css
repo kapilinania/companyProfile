@@ -304,7 +304,7 @@ ul { list-style: none; }
     .nav-links.active { transform: translateY(0); opacity: 1; }
     .nav-links a { font-size: 1.5rem; }
 
-    .hero { padding-top: 100px; } /* Fixed uneven space */
+    .hero { min-height: auto; padding-top: 160px; padding-bottom: 80px; }
     .hero-title { font-size: 2.8rem; margin-top: 20px; }
     .hero-subtitle { font-size: 1rem; padding: 0 10px; }
     .hero-glow-orb { width: 300px; height: 300px; filter: blur(50px); }
