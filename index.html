@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#050505">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
     <title>ByteSerf | Premium Web & AI Solutions Agency</title>
     <meta name="description" content="ByteSerf is a premium agency founded by Kapil Inania, specializing in high-performance web architectures, custom AI agents, and elite tech education.">
     <meta name="keywords" content="Web Development Agency, AI Consulting, IT Academy, Full Stack Development, React Developer, SEO Agency, ByteSerf, Kapil Inania">
@@ -29,23 +35,50 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "ByteSerf",
-      "url": "https://www.byteserf.com",
-      "description": "Premium agency founded by Kapil Inania, specializing in high-performance web architectures and custom AI agents.",
-      "founder": {
-        "@type": "Person",
-        "name": "Kapil Inania"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-9828522814",
-        "contactType": "Customer Service",
-        "areaServed": "Global",
-        "availableLanguage": ["English", "Hindi"]
-      },
-      "sameAs": [
-        "https://instagram.com/kapil_inaniya"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.byteserf.com/#organization",
+          "name": "ByteSerf",
+          "url": "https://www.byteserf.com",
+          "logo": "https://www.byteserf.com/logo.png",
+          "description": "Premium agency specializing in high-performance web architectures, custom AI agents, and tech education.",
+          "founder": {
+            "@type": "Person",
+            "name": "Kapil Inania"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-9828522814",
+            "contactType": "Customer Service",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Hindi"]
+          },
+          "sameAs": [
+            "https://instagram.com/kapil_inaniya"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.byteserf.com/#website",
+          "url": "https://www.byteserf.com",
+          "name": "ByteSerf Agency",
+          "publisher": {
+            "@id": "https://www.byteserf.com/#organization"
+          }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://www.byteserf.com/#localbusiness",
+          "name": "ByteSerf",
+          "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop",
+          "telephone": "+91-9828522814",
+          "priceRange": "$$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN"
+          }
+        }
       ]
     }
     </script>
@@ -57,9 +90,9 @@
     <div class="ambient-bg"></div>
 
     <div class="floating-actions">
-        <a href="https://wa.me/919828522814" target="_blank" class="float-btn wa-btn"><i class='bx bxl-whatsapp'></i></a>
-        <a href="https://instagram.com/kapil_inaniya" target="_blank" class="float-btn ig-btn"><i class='bx bxl-instagram'></i></a>
-        <a href="tel:+919828522814" class="float-btn call-btn"><i class='bx bxs-phone'></i></a>
+        <a href="https://wa.me/919828522814" target="_blank" class="float-btn wa-btn" aria-label="Chat on WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+        <a href="https://instagram.com/kapil_inaniya" target="_blank" class="float-btn ig-btn" aria-label="Visit Instagram"><i class='bx bxl-instagram'></i></a>
+        <a href="tel:+919828522814" class="float-btn call-btn" aria-label="Call Us"><i class='bx bxs-phone'></i></a>
     </div>
 
     <!-- Navbar -->
@@ -73,9 +106,10 @@
                 <li><a href="jobs.html">Jobs</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
-            <button class="mobile-menu-btn"><i class='bx bx-menu'></i></button>
+            <button class="mobile-menu-btn" aria-label="Toggle Mobile Menu"><i class='bx bx-menu'></i></button>
         </div>
     </nav>
+    <main id="main-content">
 
     <!-- Stunning Modern Hero Section -->
     <section class="hero reveal">
@@ -194,7 +228,7 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
                     </div>
                     <p class="review-text">"ByteSerf transformed our online presence. Their web development team delivered a blazing fast React application that increased our conversions by 300%."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
 
                 <div class="google-review-card">
@@ -209,7 +243,7 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
                     </div>
                     <p class="review-text">"The Academy's Full Stack MERN course is unmatched. Kapil provided incredible mentorship, and the 100% placement support helped me secure a high-paying job."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
 
                 <div class="google-review-card">
@@ -224,7 +258,7 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bx-star'></i>
                     </div>
                     <p class="review-text">"Their Digital Marketing and AI Automation solutions saved us countless hours. Highly recommend ByteSerf to any business looking to scale efficiently."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
 
                 <div class="google-review-card">
@@ -239,7 +273,7 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
                     </div>
                     <p class="review-text">"Absolutely brilliant. They took over our social media management and within 3 months, our organic reach skyrocketed. Kapil's team is highly professional."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
 
                 <div class="google-review-card">
@@ -254,7 +288,7 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
                     </div>
                     <p class="review-text">"We outsourced a complex Next.js project to ByteSerf. The code quality was pristine, and they delivered exactly on deadline. A reliable partner."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
 
                 <div class="google-review-card">
@@ -269,7 +303,7 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bx-star'></i><i class='bx bx-star'></i>
                     </div>
                     <p class="review-text">"The internship program is very rigorous. I learned a lot about predictive modeling, though the workload was heavy. Great stepping stone for a career."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
 
                 <div class="google-review-card">
@@ -284,7 +318,7 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
                     </div>
                     <p class="review-text">"I bought the 5-page starter package for ₹2,999. Incredible value. The site looks like it cost ₹50,000. It is fast, beautiful, and mobile-responsive."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
 
                 <div class="google-review-card">
@@ -299,7 +333,7 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
                     </div>
                     <p class="review-text">"Kapil's knowledge of AI Agents and LangChain is top tier. The training I received here completely shifted the trajectory of my tech career."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
 
                 <!-- Duplicate the 8 reviews to make the CSS infinite scroll seamless -->
@@ -315,7 +349,7 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
                     </div>
                     <p class="review-text">"ByteSerf transformed our online presence. Their web development team delivered a blazing fast React application that increased our conversions by 300%."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
 
                 <div class="google-review-card">
@@ -330,7 +364,7 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
                     </div>
                     <p class="review-text">"The Academy's Full Stack MERN course is unmatched. Kapil provided incredible mentorship, and the 100% placement support helped me secure a high-paying job."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
 
                 <div class="google-review-card">
@@ -345,7 +379,7 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bx-star'></i>
                     </div>
                     <p class="review-text">"Their Digital Marketing and AI Automation solutions saved us countless hours. Highly recommend ByteSerf to any business looking to scale efficiently."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
 
                 <div class="google-review-card">
@@ -360,7 +394,7 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
                     </div>
                     <p class="review-text">"Absolutely brilliant. They took over our social media management and within 3 months, our organic reach skyrocketed. Kapil's team is highly professional."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
 
                 <div class="google-review-card">
@@ -375,7 +409,7 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
                     </div>
                     <p class="review-text">"We outsourced a complex Next.js project to ByteSerf. The code quality was pristine, and they delivered exactly on deadline. A reliable partner."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
 
                 <div class="google-review-card">
@@ -390,7 +424,7 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bx-star'></i><i class='bx bx-star'></i>
                     </div>
                     <p class="review-text">"The internship program is very rigorous. I learned a lot about predictive modeling, though the workload was heavy. Great stepping stone for a career."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
 
                 <div class="google-review-card">
@@ -405,7 +439,7 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
                     </div>
                     <p class="review-text">"I bought the 5-page starter package for ₹2,999. Incredible value. The site looks like it cost ₹50,000. It is fast, beautiful, and mobile-responsive."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
 
                 <div class="google-review-card">
@@ -420,21 +454,22 @@
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
                     </div>
                     <p class="review-text">"Kapil's knowledge of AI Agents and LangChain is top tier. The training I received here completely shifted the trajectory of my tech career."</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google Review" loading="lazy" width="20" height="20">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
+    </main>
     <footer class="footer">
         <div class="container footer-grid reveal">
             <div class="footer-col">
                 <a href="index.html" class="logo">Byte<span style="color:var(--accent-blue);">Serf.</span></a>
                 <p style="margin-top: 15px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8;">Founded by Kapil Inania.<br>We shape the future of the web.</p>
                 <div class="social-icons">
-                    <a href="https://instagram.com/kapil_inaniya" target="_blank"><i class='bx bxl-instagram'></i></a>
-                    <a href="https://wa.me/919828522814" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="https://instagram.com/kapil_inaniya" target="_blank" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://wa.me/919828522814" target="_blank" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
                 </div>
                 <div class="trusted-seal">
                     <i class='bx bx-check-shield'></i> 100% Trusted Agency
