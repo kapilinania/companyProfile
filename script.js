@@ -114,9 +114,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const callbackBtn = document.getElementById('submitCallbackBtn');
     
     if (modal) {
-        // Show modal after 3.5 seconds, only once per session
+        // Show modal after 3.5 seconds
+        // DO NOT show if they already submitted their details (localStorage)
+        // DO NOT show if they closed it during this browsing session (sessionStorage)
         setTimeout(() => {
-            if (!sessionStorage.getItem('callbackModalClosed')) {
+            if (!localStorage.getItem('leadCaptured') && !sessionStorage.getItem('callbackModalClosed')) {
                 modal.classList.add('active');
             }
         }, 3500);
@@ -157,8 +159,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Open WhatsApp
                 window.open(waUrl, '_blank');
                 
+                // Never show this modal again to this user
+                localStorage.setItem('leadCaptured', 'true');
+
                 // Close Modal after successful submission
-                closeModal();
+                modal.classList.remove('active');
             });
         }
     }
