@@ -66,37 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
         marqueeTrack.innerHTML += items; // Duplicate items to make scroll seamless
     }
 
-    // Review Slider Logic
-    const reviewTrack = document.querySelector('.review-track');
-    const prevBtn = document.getElementById('prevReview');
-    const nextBtn = document.getElementById('nextReview');
-
-    if (reviewTrack && prevBtn && nextBtn) {
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.review-slide');
-        const totalSlides = slides.length;
-
-        function updateSlider() {
-            reviewTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
-
-        nextBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlider();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateSlider();
-        });
-
-        // Auto-slide every 6 seconds
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlider();
-        }, 6000);
-    }
-
     // FAQ Interactive Accordion
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
@@ -104,4 +73,59 @@ document.addEventListener("DOMContentLoaded", () => {
             item.classList.toggle('active');
         });
     });
+
+    // Request Callback Modal Logic
+    const modal = document.getElementById('callbackModal');
+    const closeBtn = document.getElementById('closeModalBtn');
+    const callbackBtn = document.getElementById('submitCallbackBtn');
+    
+    if (modal) {
+        // Show modal after 3.5 seconds, only once per session
+        setTimeout(() => {
+            if (!sessionStorage.getItem('callbackModalClosed')) {
+                modal.classList.add('active');
+            }
+        }, 3500);
+
+        // Close modal and prevent showing again this session
+        const closeModal = () => {
+            modal.classList.remove('active');
+            sessionStorage.setItem('callbackModalClosed', 'true');
+        };
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeModal);
+        }
+
+        // Close if clicked outside the box
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Handle Submit to WhatsApp
+        if (callbackBtn) {
+            callbackBtn.addEventListener('click', () => {
+                const name = document.getElementById('modalName').value.trim();
+                const phone = document.getElementById('modalPhone').value.trim();
+
+                if (!name || !phone) {
+                    alert("Please enter your name and mobile number to request a call back.");
+                    return;
+                }
+
+                // Construct message
+                const message = `Hi Kapil! My name is ${name} and my mobile number is ${phone}. I am requesting a call back to discuss your services.`;
+                const encodedMessage = encodeURIComponent(message);
+                const waUrl = `https://wa.me/919828522814?text=${encodedMessage}`;
+                
+                // Open WhatsApp
+                window.open(waUrl, '_blank');
+                
+                // Close Modal after successful submission
+                closeModal();
+            });
+        }
+    }
 });

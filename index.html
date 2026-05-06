@@ -8,9 +8,46 @@
     <meta name="description" content="ByteSerf is a premium agency founded by Kapil Inania, specializing in high-performance web architectures, custom AI agents, and elite tech education.">
     <meta name="keywords" content="Web Development Agency, AI Consulting, IT Academy, Full Stack Development, React Developer, SEO Agency, ByteSerf, Kapil Inania">
     <meta name="author" content="Kapil Inania">
+    
+    <!-- Open Graph & Social Media -->
     <meta property="og:title" content="ByteSerf | Premium Web & AI Solutions Agency">
     <meta property="og:description" content="ByteSerf specializes in high-performance web architectures, custom AI agents, and elite tech education.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.byteserf.com/">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ByteSerf | Premium Web & AI Solutions Agency">
+    <meta name="twitter:description" content="ByteSerf specializes in high-performance web architectures, custom AI agents, and elite tech education.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.byteserf.com/">
+
+    <!-- Advanced Schema Markup (JSON-LD) for Google Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ByteSerf",
+      "url": "https://www.byteserf.com",
+      "description": "Premium agency founded by Kapil Inania, specializing in high-performance web architectures and custom AI agents.",
+      "founder": {
+        "@type": "Person",
+        "name": "Kapil Inania"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9828522814",
+        "contactType": "Customer Service",
+        "areaServed": "Global",
+        "availableLanguage": ["English", "Hindi"]
+      },
+      "sameAs": [
+        "https://instagram.com/kapil_inaniya"
+      ]
+    }
+    </script>
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -420,6 +457,20 @@
             </div>
         </div>
     </footer>
+
+    <!-- Call Back Request Modal -->
+    <div class="modal-overlay" id="callbackModal">
+        <div class="modal-box">
+            <button class="close-modal-btn" id="closeModalBtn"><i class='bx bx-x'></i></button>
+            <h2 class="modal-title">Request a <span class="gradient-text">Call Back</span></h2>
+            <p class="modal-desc">Enter your details below and Kapil or a senior team member will reach out to you shortly.</p>
+            
+            <input type="text" id="modalName" class="modal-input" placeholder="Your Name" required>
+            <input type="tel" id="modalPhone" class="modal-input" placeholder="Your Mobile Number" required>
+            
+            <button id="submitCallbackBtn" class="btn btn-glow" style="width: 100%; margin-top: 10px;">Request Call Back</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

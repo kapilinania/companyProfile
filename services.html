@@ -8,9 +8,56 @@
     <meta name="description" content="ByteSerf offers premium web development, custom AI automation, and digital marketing services. Elevate your brand with our Silicon Valley-grade architectures.">
     <meta name="keywords" content="Web Development, AI Automation, Digital Marketing, SEO Services, React Development, Node.js, MERN Stack, ByteSerf">
     <meta name="author" content="Kapil Inania">
+    
+    <!-- Open Graph & Social Media -->
     <meta property="og:title" content="Web Development & AI Services | ByteSerf">
     <meta property="og:description" content="ByteSerf offers premium web development, custom AI automation, and digital marketing services.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.byteserf.com/services.html">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Web Development & AI Services | ByteSerf">
+    <meta name="twitter:description" content="ByteSerf offers premium web development, custom AI automation, and digital marketing services.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.byteserf.com/services.html">
+
+    <!-- Advanced Schema Markup (JSON-LD) for Google Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Web Development & AI Automation",
+      "provider": {
+        "@type": "Organization",
+        "name": "ByteSerf",
+        "url": "https://www.byteserf.com"
+      },
+      "areaServed": "Global",
+      "description": "High-performance web applications, dynamic CMS, and data-driven SEO marketing campaigns.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IT Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web Development Package"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SEO & Digital Marketing"
+            }
+          }
+        ]
+      }
+    }
+    </script>
     
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
@@ -187,6 +234,20 @@
             </div>
         </div>
     </footer>
+    <!-- Call Back Request Modal -->
+    <div class="modal-overlay" id="callbackModal">
+        <div class="modal-box">
+            <button class="close-modal-btn" id="closeModalBtn"><i class='bx bx-x'></i></button>
+            <h2 class="modal-title">Request a <span class="gradient-text">Call Back</span></h2>
+            <p class="modal-desc">Enter your details below and Kapil or a senior team member will reach out to you shortly.</p>
+            
+            <input type="text" id="modalName" class="modal-input" placeholder="Your Name" required>
+            <input type="tel" id="modalPhone" class="modal-input" placeholder="Your Mobile Number" required>
+            
+            <button id="submitCallbackBtn" class="btn btn-glow" style="width: 100%; margin-top: 10px;">Request Call Back</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

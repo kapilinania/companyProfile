@@ -8,9 +8,38 @@
     <meta name="description" content="Learn about Kapil Inania, founder of ByteSerf. A 20+ year tech veteran specializing in high-performance web development and AI architectures.">
     <meta name="keywords" content="Kapil Inania, ByteSerf Founder, Web Designer Jodhpur, AI Consultant, Tech Agency Founder">
     <meta name="author" content="Kapil Inania">
+    
+    <!-- Open Graph & Social Media -->
     <meta property="og:title" content="About Kapil Inania | Founder of ByteSerf">
     <meta property="og:description" content="Learn about Kapil Inania, the visionary behind ByteSerf.">
     <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://www.byteserf.com/about.html">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Kapil Inania | Founder of ByteSerf">
+    <meta name="twitter:description" content="Learn about Kapil Inania, the visionary behind ByteSerf.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.byteserf.com/about.html">
+
+    <!-- Advanced Schema Markup (JSON-LD) for Google Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Kapil Inania",
+      "jobTitle": "Founder & Lead Architect",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "ByteSerf"
+      },
+      "url": "https://www.byteserf.com/about.html",
+      "sameAs": [
+        "https://instagram.com/kapil_inaniya"
+      ]
+    }
+    </script>
     
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
@@ -140,6 +169,20 @@
             </div>
         </div>
     </footer>
+    <!-- Call Back Request Modal -->
+    <div class="modal-overlay" id="callbackModal">
+        <div class="modal-box">
+            <button class="close-modal-btn" id="closeModalBtn"><i class='bx bx-x'></i></button>
+            <h2 class="modal-title">Request a <span class="gradient-text">Call Back</span></h2>
+            <p class="modal-desc">Enter your details below and Kapil or a senior team member will reach out to you shortly.</p>
+            
+            <input type="text" id="modalName" class="modal-input" placeholder="Your Name" required>
+            <input type="tel" id="modalPhone" class="modal-input" placeholder="Your Mobile Number" required>
+            
+            <button id="submitCallbackBtn" class="btn btn-glow" style="width: 100%; margin-top: 10px;">Request Call Back</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
