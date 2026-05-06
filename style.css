@@ -120,7 +120,7 @@ ul { list-style: none; }
 .premium-card {
     background: linear-gradient(180deg, rgba(30,30,35,0.4) 0%, rgba(15,15,20,0.6) 100%);
     border: 1px solid var(--border-color); border-radius: 24px; padding: 40px;
-    position: relative; overflow: hidden; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    position: relative; overflow: visible; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
     transition: var(--transition-smooth); z-index: 1;
 }
 .premium-card::before {
@@ -370,4 +370,70 @@ ul { list-style: none; }
     .google-review-card { width: 260px; }
     .card { padding: 30px 20px; }
     .premium-card { padding: 30px 20px; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color-solid);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-blue);
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0; left: 0; width: 0%; height: 3px;
+    background: var(--accent-glow);
+    z-index: 9999;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+    transition: width 0.1s;
+}
+
+/* Custom Interactive Cursor */
+@media (pointer: fine) {
+    body { cursor: none; }
+    a, button, input, .faq-item { cursor: none; }
+}
+
+.custom-cursor-dot {
+    position: fixed; top: 0; left: 0;
+    width: 6px; height: 6px;
+    background: var(--accent-blue);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+    box-shadow: 0 0 10px var(--accent-blue);
+}
+
+.custom-cursor-outline {
+    position: fixed; top: 0; left: 0;
+    width: 36px; height: 36px;
+    border: 1px solid rgba(0, 240, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+.custom-cursor-dot.hover {
+    width: 10px; height: 10px;
+    background: var(--accent-pink);
+    box-shadow: 0 0 15px var(--accent-pink);
+}
+
+.custom-cursor-outline.hover {
+    width: 60px; height: 60px;
+    border-color: rgba(255, 0, 85, 0.5);
+    background: rgba(255, 0, 85, 0.05);
 }

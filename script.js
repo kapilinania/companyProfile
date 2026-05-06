@@ -167,4 +167,61 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     }
+
+    // Add Scroll Progress Bar (Design Feature for every page)
+    const progressBar = document.createElement('div');
+    progressBar.className = 'scroll-progress';
+    document.body.appendChild(progressBar);
+
+    window.addEventListener('scroll', () => {
+        const scrollPx = document.documentElement.scrollTop;
+        const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = `${(scrollPx / winHeightPx) * 100}%`;
+        progressBar.style.width = scrolled;
+    });
+
+    // Custom Interactive Cursor (Animation Feature)
+    if (window.matchMedia("(pointer: fine)").matches) {
+        const cursorDot = document.createElement('div');
+        cursorDot.className = 'custom-cursor-dot';
+        const cursorOutline = document.createElement('div');
+        cursorOutline.className = 'custom-cursor-outline';
+        document.body.appendChild(cursorDot);
+        document.body.appendChild(cursorOutline);
+
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let outlineX = mouseX;
+        let outlineY = mouseY;
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursorDot.style.left = `${mouseX}px`;
+            cursorDot.style.top = `${mouseY}px`;
+        });
+
+        const animateCursor = () => {
+            const distX = mouseX - outlineX;
+            const distY = mouseY - outlineY;
+            outlineX += distX * 0.15; // easing
+            outlineY += distY * 0.15;
+            cursorOutline.style.left = `${outlineX}px`;
+            cursorOutline.style.top = `${outlineY}px`;
+            requestAnimationFrame(animateCursor);
+        };
+        animateCursor();
+
+        const interactiveElements = document.querySelectorAll('a, button, input, .faq-item, .card, .premium-card');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursorDot.classList.add('hover');
+                cursorOutline.classList.add('hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursorDot.classList.remove('hover');
+                cursorOutline.classList.remove('hover');
+            });
+        });
+    }
 });
