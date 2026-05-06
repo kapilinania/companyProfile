@@ -66,6 +66,40 @@ document.addEventListener("DOMContentLoaded", () => {
         marqueeTrack.innerHTML += items; // Duplicate items to make scroll seamless
     }
 
+    // Animated Number Counter for Stats
+    const counters = document.querySelectorAll('.counter');
+    const startCounters = () => {
+        counters.forEach(counter => {
+            counter.innerText = '0';
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / 100; // Speed of animation
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    };
+
+    const statsSection = document.getElementById('statsSection');
+    if (statsSection) {
+        const statsObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        statsObserver.observe(statsSection);
+    }
+
     // FAQ Interactive Accordion
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
